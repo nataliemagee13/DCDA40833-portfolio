@@ -11,14 +11,15 @@
 <body>
     <!-- Navigation: Links to all portfolio pages -->
     <nav>
-        <ul>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-<li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
-            <li><a href="tufte-critique.html">Tufte Critique</a></li>
-            <li><a href="lab04.html">Lab 04: Tableau Viz</a></li>
-            <li><a href="lab5.html">Lab 5</a></li>
-            <li><a href="hometown-map.html">Hometown Map</a></li>
-            <a href="lab02.html">Lab 2: AI Evaluation</a>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
         </ul>
     </nav>
 
@@ -63,38 +64,17 @@
             <div class="portfolio-grid">
 
                 <!-- Lab 2: AI Tool Evaluation -->
-                <a href="ai-evaluation.html" class="portfolio-card">
+                <a href="lab02.html" class="portfolio-card">
                     <h3>AI Tool Evaluation</h3>
                     <span class="lab-tag">Lab 2</span>
                     <p>Analysis of AI tools and their capabilities, exploring how artificial intelligence is changing digital culture.</p>
                 </a>
 
-                <!-- Lab 3: Tufte Critique -->
-                <a href="tufte-critique.html" class="portfolio-card">
-                    <h3>Tufte Critique</h3>
-                    <span class="lab-tag">Lab 3</span>
-                    <p>Critical analysis of a data visualization using Edward Tufte's principles of graphical excellence.</p>
-                </a>
-
                 <!-- Lab 4: Tableau Visualization -->
-                <a href="tableau-visualization.html" class="portfolio-card">
+                <a href="lab04.html" class="portfolio-card">
                     <h3>Tableau Visualization</h3>
                     <span class="lab-tag">Lab 4</span>
                     <p>Interactive data visualization created with Tableau Public, exploring patterns in real-world data.</p>
-                </a>
-
-                <!-- Lab 5: TBD -->
-                <a href="lab5.html" class="portfolio-card">
-                    <h3>Lab 5</h3>
-                    <span class="lab-tag">Lab 5</span>
-                    <p>Content based on Lab 5 assignment.</p>
-                </a>
-
-                <!-- Lab 6: Hometown Map -->
-                <a href="hometown-map.html" class="portfolio-card">
-                    <h3>Hometown Map</h3>
-                    <span class="lab-tag">Lab 6</span>
-                    <p>Interactive Folium map showcasing meaningful locations from my hometown with personal reflections.</p>
                 </a>
 
             </div>
@@ -103,18 +83,42 @@
         <!-- Reflection Section: Optional semester reflection -->
         <section id="reflection">
             <h2>Semester Reflection</h2>
-            <!-- TODO: After completing all labs, write a reflection on your growth -->
-            <p><strong>What I learned:</strong> I've learned how to use different software like GitHub to highlight my skills. I also learned how to add pictures to my site. </p>
-            <p><strong>Challenges I overcame:</strong> I was first confused on how to find different code types </p>
-            <p><strong>How I grew:</strong> [How did your understanding of digital culture and data analytics evolve?]</p>
-            <p><strong>Looking ahead:</strong> [How will you apply these skills in the future?]</p>
+            <!-- Reflection on learning and growth throughout the semester -->
+            <p><strong>What I learned:</strong> I've learned how to use different software like GitHub to highlight my skills. I also learned how to add pictures to my site and create interactive data visualizations using tools like Tableau. Understanding how to structure HTML and style with CSS has given me the foundation to build professional web portfolios.</p>
+            <p><strong>Challenges I overcame:</strong> At first, I was confused about how to find different code types and understand HTML structure. Learning to debug issues like broken links and navigation problems helped me become more comfortable with web development. I also learned to think critically about data visualization and how to present information effectively.</p>
+            <p><strong>How I grew:</strong> My understanding of digital culture and data analytics has evolved from just consuming content to creating it. I can now analyze how AI tools work, critique data visualizations, and build my own interactive projects that tell stories through data.</p>
+            <p><strong>Looking ahead:</strong> I plan to apply these skills in my Strategic Communications work by combining storytelling with data-driven insights. Understanding both the creative and analytical sides will help me make smarter decisions about content creation and audience engagement.</p>
         </section>
     </main>
 
     <!-- Footer: Links and copyright -->
     <footer>
-        <p><a href="https://github.com/yourusername/your-repo-name">View Repository on GitHub</a></p>
+        <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
         <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
     </footer>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Update aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>

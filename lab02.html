@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Evaluation | Your Name</title>
+    <title>AI Evaluation | Natalie Magee</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navigation: Links to all portfolio pages -->
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="lab02.html" class="active">Lab 2: AI Evaluation</a>
-            <!-- Add more lab links as the semester progresses -->
-        </nav>
         <h1>AI Tool Evaluation</h1>
+        <p>Lab 2: Analyzing AI Tools in Digital Culture</p>
     </header>
 
     <main>
@@ -65,7 +75,32 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Natalie Magee| <a href="https://github.com/yourusername/dcda-portfolio">GitHub</a></p>
+        <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
+        <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
     </footer>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Update aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
