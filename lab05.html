@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 05 - Vibe Coding | Natalie Magee</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 24px;
+      line-height: 1.5;
+      background: white;
+      color: black;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    /* DARK MODE styles */
+    body.dark {
+      background: #121212;
+      color: #f2f2f2;
+    }
+
+    body.dark .card {
+      border-color: #444;
+    }
+
+    button {
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation: Links to all portfolio pages -->
+  <nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+      <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+      <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Lab 05: Vibe Coding</h1>
+    <p>Experiments with AI-Assisted Coding</p>
+  </header>
+
+  <main>
+    <section>
+      <p>This page documents my Lab 05 experiments.</p>
+
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+
+      <div class="card">
+        <h2>Experiment A: Portfolio Enhancement</h2>
+        <p>I added a dark mode toggle using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="card">
+        <h2>Experiment B: Python Code Generation</h2>
+        <p>I used Google Colab to read a CSV of political party support and generate a line chart using pandas and matplotlib.</p>
+
+        <p>
+          <a href="lab05_politics_chart.ipynb" download>
+            Download My Colab Notebook
+          </a>
+        </p>
+        <h3>Python Code</h3>
+        <img src="images/lab05_code.png" width="700" alt="Python code for political party chart">
+
+        <h3>Generated Chart Output</h3>
+        <img src="images/lab05_chart.png" width="700" alt="Political party support line chart">
+      </div>
+      <div class="card">
+  <h2>Experiment C: Debugging with AI</h2>
+
+  <p>
+  I intentionally broke an image path by changing the folder
+  name from "images" to "image". The image failed to load.
+  I used AI to identify the incorrect file path and fix it.
+  </p>
+
+  <h3>Broken Page</h3>
+  <img src="images/lab05_debug_broken.png" width="700">
+
+  <h3>Incorrect Code</h3>
+  <img src="images/lab05_debug_code.png" width="700">
+
+  <h3>AI Explanation</h3>
+  <img src="images/lab05_debug_ai.png" width="700">
+</div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
+    <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
+  </footer>
+
+  <footer>
+    <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
+    <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById("darkModeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      console.log("toggled dark mode");
+    });
+
+    // Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      
+      const isExpanded = hamburger.classList.contains('active');
+      hamburger.setAttribute('aria-expanded', isExpanded);
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -493,3 +493,11 @@ footer a:hover {
         page-break-inside: avoid;
     }
 }
+body.dark {
+  background: #121212;
+  color: #f2f2f2;
+}
+
+body.dark .card {
+  border-color: #444;
+}
