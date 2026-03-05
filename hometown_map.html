@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_726d01bf0c27789ac7fb5a850bda8e8c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_726d01bf0c27789ac7fb5a850bda8e8c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_726d01bf0c27789ac7fb5a850bda8e8c = L.map(
+                "map_726d01bf0c27789ac7fb5a850bda8e8c",
+                {
+                    center: [32.7330569864406, -97.3642373864116],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_76787aaea17822abf9f957bf802e71f6 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/nataliemagee/cmmdqv4dd001901s251khd3i9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibmF0YWxpZW1hZ2VlIiwiYSI6ImNtbTB2YzgyNzAyemYycW9jaHE0aGxqeDkifQ.x_Y61VqJTIeQkFoYbYQzWA",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Mapbox",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_76787aaea17822abf9f957bf802e71f6.addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+            var marker_05f00fdb2d2116466fd536b6a96ac0a0 = L.marker(
+                [32.71159, -97.360535],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_6495d71eb377f3814018096f0cd44e04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fd4633418dce4a0414b5a128599acaa = $(`<div id="html_2fd4633418dce4a0414b5a128599acaa" style="width: 100.0%; height: 100.0%;"><strong>TCU Campus</strong><br>Type: school<br>2800 S University Dr Fort Worth TX</div>`)[0];
+                popup_6495d71eb377f3814018096f0cd44e04.setContent(html_2fd4633418dce4a0414b5a128599acaa);
+            
+        
+
+        marker_05f00fdb2d2116466fd536b6a96ac0a0.bindPopup(popup_6495d71eb377f3814018096f0cd44e04)
+        ;
+
+        
+    
+    
+            var marker_583845272d3f6a43d4ba3fb7dca48e03 = L.marker(
+                [32.7511302, -97.3508644],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_fece5e5f207c1df0dad24c8d54c42257 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d47498c56e4fa69fbd14517f2a8e6ee2 = $(`<div id="html_d47498c56e4fa69fbd14517f2a8e6ee2" style="width: 100.0%; height: 100.0%;"><strong>City Boots Fort Worth</strong><br>Type: store<br>2416 W 7th St Fort Worth TX</div>`)[0];
+                popup_fece5e5f207c1df0dad24c8d54c42257.setContent(html_d47498c56e4fa69fbd14517f2a8e6ee2);
+            
+        
+
+        marker_583845272d3f6a43d4ba3fb7dca48e03.bindPopup(popup_fece5e5f207c1df0dad24c8d54c42257)
+        ;
+
+        
+    
+    
+            var marker_f25a230c9bb273ea00bb36947d454c50 = L.marker(
+                [32.731492, -97.3891563],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_316ed686b7f85b2b1afe6cc6bc9adc36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9be14b2847ea5a3c524fd95897fcea30 = $(`<div id="html_9be14b2847ea5a3c524fd95897fcea30" style="width: 100.0%; height: 100.0%;"><strong>Mi Cocina</strong><br>Type: restaurant<br>4601 West Fwy Fort Worth TX</div>`)[0];
+                popup_316ed686b7f85b2b1afe6cc6bc9adc36.setContent(html_9be14b2847ea5a3c524fd95897fcea30);
+            
+        
+
+        marker_f25a230c9bb273ea00bb36947d454c50.bindPopup(popup_316ed686b7f85b2b1afe6cc6bc9adc36)
+        ;
+
+        
+    
+    
+            var marker_ff3ca2891124804834e23982535236b8 = L.marker(
+                [32.7357366, -97.3972693],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_225f45962e3443e95eee8e2b28df9d78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e89e49445704e0a6deb43a9e987bbeac = $(`<div id="html_e89e49445704e0a6deb43a9e987bbeac" style="width: 100.0%; height: 100.0%;"><strong>Indigo Yoga</strong><br>Type: fitness<br>5111 Pershing Ave Fort Worth TX</div>`)[0];
+                popup_225f45962e3443e95eee8e2b28df9d78.setContent(html_e89e49445704e0a6deb43a9e987bbeac);
+            
+        
+
+        marker_ff3ca2891124804834e23982535236b8.bindPopup(popup_225f45962e3443e95eee8e2b28df9d78)
+        ;
+
+        
+    
+    
+            var marker_c6bbee65c15c09610c9f534e2e9643dc = L.marker(
+                [32.7284986, -97.3614039],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_b040bea43c2755f3db7907dc317465f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bdb0f43934e88495724e5059d492cf1 = $(`<div id="html_7bdb0f43934e88495724e5059d492cf1" style="width: 100.0%; height: 100.0%;"><strong>Flower Child</strong><br>Type: restaurant<br>1616 S University Dr Fort Worth TX</div>`)[0];
+                popup_b040bea43c2755f3db7907dc317465f3.setContent(html_7bdb0f43934e88495724e5059d492cf1);
+            
+        
+
+        marker_c6bbee65c15c09610c9f534e2e9643dc.bindPopup(popup_b040bea43c2755f3db7907dc317465f3)
+        ;
+
+        
+    
+    
+            var marker_eb1be3fe80267362944625632edf8564 = L.marker(
+                [32.7359988, -97.3612754],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_5e9a11bbdcb99f597d855708259eea5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_215be1ff308b054b9d65e1d99b161b9d = $(`<div id="html_215be1ff308b054b9d65e1d99b161b9d" style="width: 100.0%; height: 100.0%;"><strong>Mamaka Bowls</strong><br>Type: cafe<br>1212 S University Dr Fort Worth TX</div>`)[0];
+                popup_5e9a11bbdcb99f597d855708259eea5c.setContent(html_215be1ff308b054b9d65e1d99b161b9d);
+            
+        
+
+        marker_eb1be3fe80267362944625632edf8564.bindPopup(popup_5e9a11bbdcb99f597d855708259eea5c)
+        ;
+
+        
+    
+    
+            var marker_355b28dba0cb0aabae9dbf5a87bf3727 = L.marker(
+                [32.698835764406, -97.359578664116],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_abbc113cba2d3a9a4661742ed3f2cab0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db01efd5aade27150cc69cf40a6685c3 = $(`<div id="html_db01efd5aade27150cc69cf40a6685c3" style="width: 100.0%; height: 100.0%;"><strong>Curly's Frozen Custard</strong><br>Type: dessert<br>3501 Blue Bonnet Cir Fort Worth TX</div>`)[0];
+                popup_abbc113cba2d3a9a4661742ed3f2cab0.setContent(html_db01efd5aade27150cc69cf40a6685c3);
+            
+        
+
+        marker_355b28dba0cb0aabae9dbf5a87bf3727.bindPopup(popup_abbc113cba2d3a9a4661742ed3f2cab0)
+        ;
+
+        
+    
+    
+            var marker_4732ef127d1baa7050095d057f75514e = L.marker(
+                [32.789533, -97.3467159],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_794485d64ca480ed741776c824d91555 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_262dc44c6bcae4f3a1b2d2a93349bca3 = $(`<div id="html_262dc44c6bcae4f3a1b2d2a93349bca3" style="width: 100.0%; height: 100.0%;"><strong>Fort Worth Stockyards</strong><br>Type: landmark<br>131 E Exchange Ave Fort Worth TX</div>`)[0];
+                popup_794485d64ca480ed741776c824d91555.setContent(html_262dc44c6bcae4f3a1b2d2a93349bca3);
+            
+        
+
+        marker_4732ef127d1baa7050095d057f75514e.bindPopup(popup_794485d64ca480ed741776c824d91555)
+        ;
+
+        
+    
+    
+            var marker_0f1b845c41f0f565ab802b6dba34472e = L.marker(
+                [32.7295437, -97.3616358],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_8484c9f8dbced5af04e438eca4ca7a08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5be11da817a0a8fa6f8416f394006694 = $(`<div id="html_5be11da817a0a8fa6f8416f394006694" style="width: 100.0%; height: 100.0%;"><strong>Eatzi's Market & Bakery</strong><br>Type: restaurant<br>1540 S University Dr Fort Worth TX</div>`)[0];
+                popup_8484c9f8dbced5af04e438eca4ca7a08.setContent(html_5be11da817a0a8fa6f8416f394006694);
+            
+        
+
+        marker_0f1b845c41f0f565ab802b6dba34472e.bindPopup(popup_8484c9f8dbced5af04e438eca4ca7a08)
+        ;
+
+        
+    
+    
+            var marker_afeff7c6eca6fcbaa391c0a25ba5b5a4 = L.marker(
+                [32.7182112, -97.3539392],
+                {
+}
+            ).addTo(map_726d01bf0c27789ac7fb5a850bda8e8c);
+        
+    
+        var popup_89fae043cb68bf96c39dc1a84754c245 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a30d1fbb0b9ea7c4797907772044d0d = $(`<div id="html_2a30d1fbb0b9ea7c4797907772044d0d" style="width: 100.0%; height: 100.0%;"><strong>Fort Worth Zoo</strong><br>Type: attraction<br>1989 Colonial Pkwy Fort Worth TX</div>`)[0];
+                popup_89fae043cb68bf96c39dc1a84754c245.setContent(html_2a30d1fbb0b9ea7c4797907772044d0d);
+            
+        
+
+        marker_afeff7c6eca6fcbaa391c0a25ba5b5a4.bindPopup(popup_89fae043cb68bf96c39dc1a84754c245)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 06 | Natalie Magee</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation: Links to all portfolio pages -->
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+            <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+            <li><a href="lab06.html">Lab 6: Coming Soon</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Hometown Map</h1>
+        <p>Lab 06: Interactive Map of Meaningful Locations in Fort Worth</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>This project creates an interactive map of meaningful locations in Fort Worth using Python, Folium, and Mapbox. The map displays 10 important places that are part of my daily life, from where I study to where I work and spend time with friends.</p>
+        </section>
+
+        <section>
+            <h2>Interactive Map</h2>
+            <p>Click on any marker to see the location name. Zoom in and out to explore different parts of Fort Worth.</p>
+            <figure class="viz-container">
+                <iframe src="hometown_map.html" style="width: 100%; height: 600px; border: none; border-radius: 8px;"></iframe>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Reflection</h2>
+            <p>For the original base map design I wanted to start out with something simple and clean, so I used colors that you would typically see on a map like green and blue. I also looked at references of soft colors and tried to limit the clutter on visuals. I was inspired by maps that used subtle tones and where the points of interest would be the main focus. I also tried to adjust the visibility for major roads so they would be clearer when zoomed in. I think one of the bigger challenges in this lab was designing a map that would be able to zoom in and out without being too difficult to read. To help combat this, I prioritized major roads and geographic figures when zoomed out so users could still understand the overall layout of the city. The technical part of this lab was difficult for me because it involved using Python to generate an interactive map using Folium, this was hard because I had to configure the environment in VS code which required different libraries like pandas and folium. I also struggled with correctly integrating my Mapbox style into the code. I used AI such as CoPilot to assist in creating my python code and page structure. Overall,l this project really helped me to understand how design decisions and technology like Mapbox and Python work together when creating interactive maps.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
+        <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
+    </footer>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
