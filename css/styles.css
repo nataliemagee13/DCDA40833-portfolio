@@ -487,3 +487,43 @@ footer a:hover {
     }
 
     .nav-menu a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-menu a:hover {
+        background-color: var(--primary-color);
+    }
+
+    main section {
+        padding: 1rem;         /* Less padding on mobile */
+    }
+
+    .viz-grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+    }
+}
+
+/* =========================
+   Print Styles (Optional)
+   ========================= */
+@media print {
+    nav {
+        display: none;
+    }
+
+    main section {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+}
+body.dark {
+  background: #121212;
+  color: #f2f2f2;
+}
+
+body.dark .card {
+  border-color: #444;
+}
