@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Critique | Your Name</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation: Links to all portfolio pages -->
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab03.html" aria-current="page">Lab 3: Visualization Critique</a></li>
+            <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+            <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+            <li><a href="lab06.html">Lab 6: Python Mapping</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Visualization Critique</h1>
+        <p>Lab 3: Tufte Critique</p>
+        <p><a href="index.html">Back to Portfolio Home</a></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Visualization</h2>
+            <figure>
+                <a href="https://www.data-to-art.com/artist/nick-whiteley/vanishing-points" target="_blank" rel="noopener noreferrer">
+                    <img src="images/Tiger.png" alt="Visualization of a tiger face created from thousands of small dots representing the remaining global tiger population, estimated at about 4,500 in 2020.">
+                </a>
+                <figcaption>
+                    <strong>Title:</strong> Nick Whiteley's "Vanishing Points" <br>
+                    <strong>Source:</strong> <a href="https://www.data-to-art.com/artist/nick-whiteley/vanishing-points" target="_blank" rel="noopener noreferrer">Data to Art</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Critique</h2>
+            This Data Visualization I have chosen to critique is a part of Nick Whiteley’s “Vanishing Points” Project. It is an artistic representation of a tiger's face made up of small dots that represent population data. The graphic aims to communicate that there are about 4,500 tigers left as of the time it was made in 2020. This design blends data visualization and art to show how tigers are an endangered species and this is something that people should be paying attention to. This Critique will evaluate how well this visualization communicates information using Tufte’s concept of information resolution and other concerns. 
+            <h3>Information Resolution</h3>
+            <p>This graphic is effective at clearly showing that tigers are endangered, and you are even able to clearly see the population estimate in 2020 that stands at 4,500. Using the small dots that represent the population to create an image of a tiger helps to connect the data to the subject and make the message easy to understand. The minimalist design and simple colors also makes the message noticeable immediately. This image is effective in helping to grab attention and encourage viewers to think about conservation. However, the simplistic nature of the design leads to many unanswered questions. For example, the image does not directly tell you what the dots represent and it is up to you to do more research or assume based on the population number in the corner. It is also unclear in this image where this population data comes from, including what countries tigers still live in. This specific image does not address how the population has either increased or decreased over time. So while this image does a great job at making viewers aware of the relatively small population of tigers recorded, it still leaves many unanswered questions, and does not allow viewers to analyze trends or patterns. This graphic is more focused on the visual impact rather than a data explanation. 
+</p>
+
+            <h3>Effects Without Causes</h3>
+            <p>Another concern that can be applied to this visualization is what Tufte refers to as “effects without causes.” The graphic clearly shows the result that the tiger population is very small, but it does not explain why this has happened. Viewers can see that there are only about 4,500 tigers left, which makes it clear that the species is endangered. However, the visualization does not include any explanation for the reasons behind this decline. For example, it does not mention things like habitat loss, poaching, or human development that have contributed to the decrease in tiger populations over time. Because of this, the viewer understands that there is a problem, but not what caused the problem in the first place. Including even a small amount of extra context about these causes could help viewers better understand why tiger populations have become so low. </p>
+
+            <h3>Overreaching</h3>
+            <p>Another issue with the visualization is the possibility of overreaching. The design of the graphic is very dramatic and visually striking, which makes the situation feel extremely urgent. Seeing the tiger’s face made up of fading dots can make the viewer feel like the species is very close to disappearing completely. While the number 4,500 is clearly small, the visualization only gives one number and does not show how the population has changed over time. Because there is no historical comparison or timeline included, it is hard to know whether the population is currently getting worse, improving, or staying the same. As a result, the emotional impact of the design might lead viewers to assume more about the situation than the data in the graphic actually shows.
+</p>
+            <h3>Conclusion</h3>
+            <p>Overall, this visualization is very effective at grabbing attention and making people think about endangered species. The use of dots to form the tiger’s face is creative and memorable, and it makes the data feel more personal and impactful. At the same time, when looking at it through Tufte’s framework, the graphic does not provide a very high level of information resolution and leaves several questions unanswered. It works well as a piece of visual communication meant to raise awareness, but it does not give viewers much information about the data itself. Adding more context or supporting information could make the visualization even stronger and help viewers better understand the issue being presented.
+</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Natalie Magee</p>
+    </footer>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+
+            // Update aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
