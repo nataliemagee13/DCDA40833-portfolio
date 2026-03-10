@@ -7,11 +7,11 @@
    CSS Variables (Color Scheme)
    ========================= */
 :root {
-    --primary-color: #334155;      /* TCU Purple */
-    --secondary-color: #f43f5e;    /* Light Purple */
-    --accent-color: #06b6d4;       /* Gold accent */
-    --text-color: #333;            /* Dark gray for text */
-    --text-secondary: #64748b;     /* Lighter gray for captions */
+    --primary-color: #4a3355;      /* TCU Purple */
+    --secondary-color: #e8bcf3;    /* Light Purple */
+    --accent-color: #cac3ec;       /* Gold accent */
+    --text-color: #3a2b44;            /* Dark gray for text */
+    --text-secondary: #463850;     /* Lighter gray for captions */
     --bg-color: #f4f4f4;           /* Light background */
     --white: #ffffff;
 }
@@ -209,8 +209,33 @@ main section li {
     margin-bottom: 0.5rem;
 }
 
+/* Keep homepage profile image much smaller than full content width */
+#about .profile-photo img {
+    width: min(45vw, 200px);
+}
+
 /* Figure captions */
 .viz-container figcaption {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Standard figure images (for lab screenshots) */
+main section figure:not(.viz-container) {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+main section figure:not(.viz-container) img {
+    width: min(85%, 700px);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main section figure:not(.viz-container) figcaption {
     font-style: italic;
     color: var(--text-secondary);
     font-size: 0.9rem;
