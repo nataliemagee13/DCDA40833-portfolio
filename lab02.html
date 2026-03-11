@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation: Links to all portfolio pages -->
+    <!-- Global lab navigation so visitors can move across the portfolio without returning home. -->
     <nav>
         <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
@@ -24,14 +24,17 @@
         </ul>
     </nav>
 
+    <!-- Page header -->
     <header>
         <h1>AI Tool Evaluation</h1>
         <p>Lab 2: Analyzing AI Tools in Digital Culture</p>
         <p><a href="index.html">Back to Portfolio Home</a></p>
     </header>
 
+    <!-- Main content -->
     <main>
         <section>
+            <!-- summary of what the lab asked for and how I approached it -->
             <h2>Overview / Lab Requirements</h2>
             <p>For this lab, I tested ChatGPT and Canva Magic Studio to see how useful they actually are for school and creative work.</p>
             <ul>
@@ -42,16 +45,19 @@
         </section>
 
         <section>
+            <!-- Personal takeaways from testing the tools -->
             <h2>What I Learned</h2>
             <p>I learned that AI works best for me as a starting point, not a final answer. ChatGPT helped me brainstorm and organize ideas, and Canva sped up visual layout, but I still had to revise everything to make it specific, accurate, and actually sound like me.</p>
         </section>
 
         <section>
+            <!-- Skills this lab demonstrates -->
             <h2>What This Demonstrates About My Abilities</h2>
             <p>This lab shows that I can use digital tools critically instead of just accepting whatever they generate. It demonstrates that I can compare tools across writing and design tasks, call out ethical concerns, and explain where human decisions still matter most.</p>
         </section>
 
         <section>
+            <!-- breakdown of each tool, plus examples placed directly below each write-up -->
             <h2>Reflection</h2>
 
             <h3>ChatGPT</h3>
@@ -82,7 +88,6 @@
         <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
     </footer>
 
-    <!-- Hamburger Menu JavaScript -->
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
@@ -91,7 +96,6 @@
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
             
-            // Update aria-expanded for accessibility
             const isExpanded = hamburger.classList.contains('active');
             hamburger.setAttribute('aria-expanded', isExpanded);
         });

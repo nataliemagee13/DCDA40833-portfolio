@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation: Links to all portfolio pages -->
+    <!-- Shared navigation for quick movement between lab pages. -->
     <nav>
         <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
@@ -24,6 +24,7 @@
         </ul>
     </nav>
 
+    <!-- Header -->
     <header>
         <h1>Visualization Critique</h1>
         <p>Lab 3: Tufte Critique</p>
@@ -32,6 +33,7 @@
 
     <main>
         <section>
+            <!-- Assignment framing and required critique scope  -->
             <h2>Overview / Lab Requirements</h2>
             <p>For this lab, I picked a public data visualization and broke down how well it actually communicates the message using ideas from Edward Tufte.</p>
             <ul>
@@ -42,7 +44,9 @@
         </section>
 
         <section>
-        
+            <!-- Source visualization being critiqued, linked to the original publication -->
+            <h2>Visual / Embedded Content</h2>
+
             <figure>
                 <a href="https://www.data-to-art.com/artist/nick-whiteley/vanishing-points" target="_blank" rel="noopener noreferrer">
                     <img src="images/Tiger.png" alt="Visualization of a tiger face created from thousands of small dots representing the remaining global tiger population, estimated at about 4,500 in 2020.">
@@ -55,16 +59,19 @@
         </section>
 
         <section>
+            <!-- takeaways from applying Tufte's critique lens -->
             <h2>What I Learned</h2>
             <p>I learned that a visualization can look amazing and still leave big information gaps. This piece is memorable and emotional, but once I looked at it through Tufte's framework, I could clearly see what context was missing and why that matters.</p>
         </section>
 
         <section>
+            <!-- What this critique says about my analysis skills -->
             <h2>What This Demonstrates About My Abilities</h2>
             <p>This critique shows that I can go beyond whether something looks good and evaluate how well it works as communication. It also shows I can apply course concepts and explain both strengths and weak spots in a visual.</p>
         </section>
 
         <section>
+            <!-- The critique i wrote -->
             <h2>Reflection</h2>
             <p>This visualization comes from Nick Whiteley's "Vanishing Points" project. It shows a tiger's face made of small dots tied to population data, with about 4,500 tigers left in 2020. I like how it mixes art and data, and my critique focuses on how clearly it communicates that message using Tufte's idea of information resolution plus a few other issues.</p>
 
@@ -82,11 +89,11 @@
         </section>
     </main>
 
+    <!--  footer for this lab page. -->
     <footer>
         <p>© 2026 Natalie Magee</p>
     </footer>
 
-    <!-- Hamburger Menu JavaScript -->
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
@@ -95,7 +102,6 @@
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
 
-            // Update aria-expanded for accessibility
             const isExpanded = hamburger.classList.contains('active');
             hamburger.setAttribute('aria-expanded', isExpanded);
         });
@@ -105,9 +111,4 @@
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            });
-        });
-    </script>
-</body>
-</html>
+                hamburger.setAttribute('aria-expanded', 'false

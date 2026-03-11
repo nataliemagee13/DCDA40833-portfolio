@@ -31,14 +31,17 @@
       background: #24172c;
     }
 
+    /* Dark mode nav override to keep menu contrast balanced. */
     body.dark nav {
       background: #5f4670;
     }
 
+    /* Lightens nav link text in dark mode for readability. */
     body.dark nav a {
       color: #f2f2f2;
     }
 
+    /* Hover feedback still needs clear contrast in dark mode. */
     body.dark nav a:hover {
       background: #e8bcf3;
       color: #24172c;
@@ -87,7 +90,6 @@
 </head>
 
 <body>
-  <!-- Navigation: Links to all portfolio pages -->
   <nav>
     <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span>
@@ -109,8 +111,10 @@
     <p>Experiments with AI-Assisted Coding</p>
   </header>
 
+  <!-- Main content  -->
   <main>
     <section>
+      <!--overview of purpose, scope, and assignment expectations -->
       <h2>Overview / Lab Requirements</h2>
       <p>I was excited for Lab 5 because after learning in class how Copilot could help correct parts of my portfolio code, I wanted to see what else it could help me create for my site. Through this lab, I completed three experiments to test how AI could support coding features on my website: a dark mode toggle, a Python CSV visualization, and debugging a broken image path.</p>
       <ul>
@@ -121,6 +125,7 @@
     </section>
 
     <section>
+      <!-- Visual evidence for each experiment. -->
       <h2>Visual / Embedded Content</h2>
 
       <div class="card">
@@ -143,92 +148,4 @@
       </div>
 
       <div class="card">
-        <h3>Experiment C: Debugging with AI</h3>
-        <figure>
-          <img src="images/lab05_debug_broken.png" alt="Broken page showing a missing image after the file path was changed">
-          <figcaption>Broken page after the image path was changed.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/lab05_debug_code.png" alt="Code screenshot showing the incorrect image path">
-          <figcaption>Screenshot of the incorrect code that caused the error.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/lab05_debug_ai.png" alt="AI explanation identifying the incorrect image path and the fix">
-          <figcaption>AI explanation used to diagnose and fix the problem.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section>
-      <h2>What I Learned</h2>
-      <p>I learned that these experiments were not as automatic as I expected. AI was helpful, but I had to be intentional and specific in my prompts to get the result I wanted. This lab also changed how I think about AI. I usually have negative connotations because I feel like AI can make people lazy, but in this case it felt more like a tool that helped me create things I would have struggled to build alone.</p>
-    </section>
-
-    <section>
-      <h2>What This Demonstrates About My Abilities</h2>
-      <p>This lab demonstrates that I can experiment with new tools, ask effective questions, and apply AI support to real coding problems. It also shows that even when I do not fully recognize every line of code, I can still test, interpret results, and use the tool to build creative features in a practical way.</p>
-    </section>
-
-    <section>
-      <h2>Reflection</h2>
-
-      <p>I was excited for this lab because seeing how Copilot could help correct code on my portfolio in class made me curious about what else I could build with AI support. Across the three experiments, I realized AI works best when I give clear instructions and keep checking the output instead of expecting it to do everything automatically.</p>
-
-      <div class="card">
-        <h3>Experiment A: Portfolio Enhancement</h3>
-        <p>The first thing I did was ask AI to create a dark mode toggle feature for Lab 05 on my portfolio. The toggle button inverts the colors on the page to black with white text. I did not immediately understand all of the code AI created, but once I added it to my page, I recognized phrases like <code>classList.toggle("dark")</code>, which helped me understand how the page switches into dark mode. This experiment showed me that if I am very specific with my wording, AI can be really helpful for building features.</p>
-      </div>
-
-      <div class="card">
-        <h3>Experiment B: Python Code Generation</h3>
-        <p>The next experiment was creating a CSV file and using Python to generate a graph that I could upload to my profile. Honestly, this was the part I understood the least, and I had to let AI do more of the work. I was still able to ask questions effectively, which helped me get the result I wanted, even though a lot of the code it returned was not code I recognized right away. I had to trust and test it, and it was cool to see it come together in the end.</p>
-        <p><a href="lab05_politics_chart.ipynb" download>Download My Colab Notebook</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Experiment C: Debugging with AI</h3>
-        <p>The last experiment I explored was intentionally breaking an image path and then asking AI to help fix it. Once I broke the code, I honestly forgot what was missing because code can all start to look the same to me. Having Copilot locate the error and repair it was super helpful, and this is definitely something I can see myself using in the future when I get stuck.</p>
-      </div>
-
-      <p>Overall, this lab changed my view of AI. I still think there are downsides in everyday use when people become too reliant on it, but for coding and digital creation it can be a real tool when used properly. Since I enjoy creating things digitally but still struggle with code at times, this lab showed me that AI can help streamline the creative process without replacing my own effort.</p>
-    </section>
-
-  </main>
-
-  <footer>
-    <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
-    <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
-  </footer>
-
-  <script>
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById("darkModeToggle");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      console.log("toggled dark mode");
-    });
-
-    // Hamburger Menu
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-      
-      const isExpanded = hamburger.classList.contains('active');
-      hamburger.setAttribute('aria-expanded', isExpanded);
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
-</body>
-</html>
+        <h3>Experiment C: Debugging with AI

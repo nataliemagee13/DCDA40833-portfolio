@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation: Links to all portfolio pages -->
     <nav>
         <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
@@ -24,13 +23,16 @@
         </ul>
     </nav>
 
+    <!-- Header -->
     <header>
         <h1>Hometown Map</h1>
         <p>Lab 06: Interactive Map of Meaningful Locations in Fort Worth</p>
     </header>
 
+    <!-- Main content  -->
     <main>
         <section>
+            <!-- Assignment expectations-->
             <h2>Overview / Lab Requirements</h2>
             <p>For this lab, I designed an interactive hometown map in Fort Worth using Python, Folium, and Mapbox. My goal was to create a map that looked simple and clean while still being easy to read at different zoom levels.</p>
             <ul>
@@ -42,6 +44,7 @@
         </section>
 
         <section>
+            <!-- Embedded interactive map  -->
             <h2>Visual / Embedded Content</h2>
             <p>Click any marker to see the location name, and zoom in or out to explore different parts of Fort Worth.</p>
             <figure class="viz-container">
@@ -50,55 +53,23 @@
         </section>
 
         <section>
+            <!-- Key lessons learned-->
             <h2>What I Learned</h2>
             <p>I learned that making a good interactive map is both a design and technical process. The visual side mattered more than I expected, especially with color choices, clutter, and what stays visible when users zoom in and out. I also learned that setup in VS Code, Python libraries, and Mapbox styling all have to work together for the map to function correctly.</p>
         </section>
 
         <section>
+            <!-- Statement of the skills demonstrated through this project-->
             <h2>What This Demonstrates About My Abilities</h2>
             <p>This lab demonstrates that I can make thoughtful design decisions while building a technical project. It shows that I can troubleshoot Python workflow issues, configure required tools, and use AI support to help build and organize code when working with unfamiliar mapping technology.</p>
         </section>
 
         <section>
+            <!-- Full  reflection  -->
             <h2>Reflection</h2>
 
             <h3>Design Decisions</h3>
             <p>For the original base map design, I wanted to start with something simple and clean, so I used colors you would typically see on a map, like green and blue. I also looked at references with soft colors and tried to limit visual clutter. I was inspired by maps with subtle tones where points of interest are the main focus. I also adjusted the visibility for major roads so they would be clearer when zoomed in.</p>
 
             <h3>Technical Challenges</h3>
-            <p>One of the bigger challenges in this lab was designing a map that could zoom in and out without becoming difficult to read. To help with that, I prioritized major roads and geographic features when zoomed out so users could still understand the overall city layout. The technical side was also difficult because I had to generate the map in Python using Folium, configure my environment in VS Code, and work with libraries like pandas and folium. I also struggled with correctly integrating my Mapbox style into the code.</p>
-
-            <h3>Overall</h3>
-            <p>I used AI tools such as Copilot to assist with parts of my Python code and page structure. Overall, this project helped me understand how design decisions and technology like Mapbox and Python work together when creating interactive maps.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
-        <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
-    </footer>
-
-    <!-- Hamburger Menu JavaScript -->
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-
-            const isExpanded = hamburger.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', isExpanded);
-        });
-
-        // Close menu when clicking on a nav link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            });
-        });
-    </script>
-</body>
-</html>
+            <p>One of the bigger challenges in this lab was designing a map that could zoom in and out without becoming difficult to read. To help with that, I prioritized major roads and geographic features when zoomed out so users could still understand the overall city layout. The technical side was also di

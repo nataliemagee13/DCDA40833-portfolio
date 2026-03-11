@@ -519,11 +519,13 @@ footer a:hover {
         page-break-inside: avoid;
     }
 }
+/* Minimal dark-mode fallback used by pages that toggle the global body class. */
 body.dark {
   background: #121212;
   color: #f2f2f2;
 }
 
+/* Keeps card borders visible against dark surfaces on pages that use .card blocks. */
 body.dark .card {
   border-color: #444;
 }
