@@ -79,4 +79,39 @@
     <p>When choosing the design I wanted to use to visualize my data, I had to think about what would best reflect political data. For this dataset, I thought maps would be helpful to see the distribution of candidates and their parties. I also thought having circle sizes would be helpful so you can quickly glance and see where the most candidates from each party were from. I also thought a bar chart would add more context because it would be another easy way to see the distinctions between the parties and the states.</p>
 
     <h3>Findings and Interpretation</h3>
-    <p>Prior to visualizing this dataset, I would have assumed that larger states like California, Texas, and Florida would have more candidates, and I believe the visualization did confirm that. I also would have expected that the circles in the South would lean more Republican and the coastal states would lean more Democratic. California had the largest cluster, but something that surprised me was how thin the independent and other category was. This made me curious about why certain states attract
+    <p>Prior to visualizing this dataset, I would have assumed that larger states like California, Texas, and Florida would have more candidates, and I believe the visualization did confirm that. I also would have expected that the circles in the South would lean more Republican and the coastal states would lean more Democratic. California had the largest cluster, but something that surprised me was how thin the independent and other category was. This made me curious about why certain states attract more independent candidates and if candidate volume correlates with population size. Personally, I think it is a fair assumption that there would be a correlation between population and candidate volume because it is logical that the more people there are, the more would be willing to run. It was interesting to see how the amount of candidates spread out across states, and I would like to look into how each state's voting reacted to the different candidates.</p>
+
+    <h3>Tool Assessment</h3>
+    <p>I think Tableau helped a lot because it had very easy geographic visualization, and it was cool how you can drag things around and play with the layout until you are able to see the data in a way that makes sense. I also thought it was able to make a clean dashboard, which was helpful as a final way to see the different ways I was able to interpret the data. Tableau struggled a little with the statistical depth that may be needed to fully understand this dataset, and it was a little hard at times to compare the maps and the scales across all the sheets, but I still think it was a good start for visualizing this data.</p>
+</section>
+
+</main>
+
+<footer>
+    <p><a href="https://github.com/nataliemcgee/DCDA40833-portfolio">View Repository on GitHub</a></p>
+    <p>&copy; 2026 Natalie Magee | DCDA 40833 | TCU</p>
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        const isExpanded = hamburger.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>
+
+</body>
+</html>
